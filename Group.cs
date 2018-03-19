@@ -2,6 +2,7 @@ public class Group
     {
         private string group_name;
         private int year;
+        private EDU_plan edu_plan;
         
         public string Group_name
         {
@@ -28,10 +29,11 @@ public class Group
 
 
 
-        public Group(string groupname, int year_enter)
+        public Group(string groupname, int year_enter,EDU_plan Edu_plan)
         {
             group_name = groupname;
             year = year_enter;
+            edu_plan = Edu_plan;
         }
         
        
