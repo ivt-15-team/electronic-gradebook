@@ -2,7 +2,7 @@
 
 namespace person
 {
-    public class Person
+    public class Person : User
     {
         string FirstName
         {
