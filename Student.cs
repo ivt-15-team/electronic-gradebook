@@ -2,9 +2,10 @@
 //public class Student : Person
 public class Student
 {
-    public string GroupName { get; private set; }
-    public int Id { get; private set; }
-    public string Status { get; private set; }
+    public string GroupName { get; set; }
+    //THAT'S A BAD IDEA
+    public int Id { get; set; }
+    public string Status { get; set; }
 
     public Student(string groupName, int id, string status)
     {
