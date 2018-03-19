@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace person
+﻿namespace Ebook
 {
     public class Person
     {
@@ -54,7 +52,7 @@ namespace person
             }
         }
 
-        public User PersonOwner1 
+        public User PersonOwner1; 
 
         Person(string _fname, string _sname, string _mname, DateTime _bdate)
         {
