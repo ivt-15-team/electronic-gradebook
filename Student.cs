@@ -1,4 +1,4 @@
-﻿s//waiting for parent classes to be implemented
+﻿//waiting for parent classes to be implemented
 //public class Student : Person
 public class Student
 {
