@@ -2,8 +2,13 @@
 
 namespace person
 {
-    public class Person : User
+    public class Person
     {
+        User PersonOwner
+        {
+            get => PersonOwner;
+            set => PersonOwner = value;
+        }
         string FirstName
         {
             get
@@ -48,6 +53,8 @@ namespace person
                 this.BirthDate = value;
             }
         }
+
+        public User PersonOwner1 
 
         Person(string _fname, string _sname, string _mname, DateTime _bdate)
         {
