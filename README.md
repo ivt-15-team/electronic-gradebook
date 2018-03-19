@@ -1,1 +1,1 @@
-"# electronic-gradebook" 
+КАЖДЫЙ ПИШЕТ СВОЙ КЛАСС.
