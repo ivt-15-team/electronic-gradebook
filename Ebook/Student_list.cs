@@ -10,26 +10,21 @@ using System.Windows.Forms;
 
 namespace Ebook
 {
-    public partial class Form1 : Form
+    public partial class Studentlist : Form
     {
-        public Form1()
+        public Studentlist()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            label2.Text = "Долги >" + Convert.ToString(trackBar1.Value);
         }
     }
 }
