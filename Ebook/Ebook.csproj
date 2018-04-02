@@ -59,6 +59,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Group.cs" />
+    <Compile Include="lektor_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lektor_list.designer.cs">
+      <DependentUpon>lektor_list.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lessons.cs" />
     <Compile Include="person.cs" />
     <Compile Include="Program.cs" />
@@ -81,6 +87,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lektor_list.resx">
+      <DependentUpon>lektor_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
