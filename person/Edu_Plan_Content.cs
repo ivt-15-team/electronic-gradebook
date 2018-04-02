@@ -4,10 +4,10 @@ namespace Ebook
 {
     public class Edu_Plan_Content
     {
-        ///private EduPlan eduPlan;
-        //private Subject subject;
-        //private Employee employee;
-        //private ControlType controlType;
+        private EDU_plan eduPlan;
+        private Subject subject;
+        private Employee employee;
+        private ControlType controlType;
         /////////////
         private string _subject_id;
         private int _total_hours;
