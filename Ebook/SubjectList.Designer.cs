@@ -1,6 +1,6 @@
 ﻿namespace Ebook
 {
-    partial class Form2
+    partial class SubjectList
     {
         /// <summary>
         /// Required designer variable.

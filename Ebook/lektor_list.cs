@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace spisokpred
+namespace Ebook
 {
-    public partial class Form1 : Form
+    public partial class LectorList : Form
     {
-        public Form1()
+        public LectorList()
         {
             InitializeComponent();
         }

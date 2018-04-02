@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ebook
 {
-    public partial class Form2 : Form
+    public partial class SubjectList : Form
     {
-        public Form2()
+        public SubjectList()
         {
             InitializeComponent();
         }
