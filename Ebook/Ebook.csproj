@@ -11,6 +11,8 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlType.cs" />
+    <Compile Include="EbookContext.cs" />
     <Compile Include="EDU_actions.cs" />
     <Compile Include="EDU_plan.cs" />
     <Compile Include="Edu_Plan_Content.cs" />
@@ -66,6 +75,15 @@
       <DependentUpon>lektor_list.cs</DependentUpon>
     </Compile>
     <Compile Include="Lessons.cs" />
+    <Compile Include="Migrations\201804020821471_UserMigration.cs" />
+    <Compile Include="Migrations\201804020821471_UserMigration.Designer.cs">
+      <DependentUpon>201804020821471_UserMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804020944096_EverythingMigration.cs" />
+    <Compile Include="Migrations\201804020944096_EverythingMigration.Designer.cs">
+      <DependentUpon>201804020944096_EverythingMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +103,11 @@
       <DependentUpon>SubjectList.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="Migrations\201804020821471_UserMigration.resx">
+      <DependentUpon>201804020821471_UserMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804020944096_EverythingMigration.resx">
+      <DependentUpon>201804020944096_EverythingMigration.cs</DependentUpon>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +123,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <EmbeddedResource Include="Student_list.resx">
       <DependentUpon>Student_list.cs</DependentUpon>
     </EmbeddedResource>

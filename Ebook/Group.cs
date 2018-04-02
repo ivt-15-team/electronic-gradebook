@@ -1,9 +1,13 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Ebook
 {
     public class Group
     {
+        [Key]
+        public int Id { get; set; }
+
         private string group_name;
         private int year;
         private EDU_plan edu_plan;

@@ -1,9 +1,13 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Ebook
 {
     public class User
     {
+        [Key]
+        public int Id { get; set; }
+
         private string login;
         public string Login
         {
