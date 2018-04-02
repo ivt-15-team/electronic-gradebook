@@ -1,9 +1,13 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Ebook
 {
     public class Edu_Plan_Content
     {
+        [Key]
+        public int Id { get; set; }
+
         private EDU_plan eduPlan;
         private Subject subject;
         private Employee employee;

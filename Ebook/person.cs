@@ -1,9 +1,13 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Ebook
 {
     public class Person
     {
+        [Key]
+        public int Id { get; set; }
+
         User PersonOwner;
         string FirstName
         {

@@ -1,5 +1,10 @@
-﻿public class Status
+﻿using System.ComponentModel.DataAnnotations;
+
+public class Status
 {
+    [Key]
+    public int Id { get; set; }
+
     private string name;
     public string Name
     {
