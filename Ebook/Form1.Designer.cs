@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -46,9 +47,8 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1013, 61);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(760, 50);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // flowLayoutPanel2
@@ -56,10 +56,9 @@
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.Cornsilk;
             this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1013, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(760, 0);
             this.flowLayoutPanel2.TabIndex = 3;
             // 
             // flowLayoutPanel3
@@ -71,10 +70,9 @@
             this.flowLayoutPanel3.Controls.Add(this.button2);
             this.flowLayoutPanel3.Controls.Add(this.button3);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 61);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 50);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(206, 585);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(155, 475);
             this.flowLayoutPanel3.TabIndex = 3;
             // 
             // flowLayoutPanel4
@@ -82,18 +80,16 @@
             this.flowLayoutPanel4.BackColor = System.Drawing.Color.Cornsilk;
             this.flowLayoutPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(4, 4);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1013, 0);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(760, 0);
             this.flowLayoutPanel4.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(4, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(3, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 58);
+            this.button1.Size = new System.Drawing.Size(145, 47);
             this.button1.TabIndex = 4;
             this.button1.Text = "Список предметов(Студ)";
             this.button1.UseVisualStyleBackColor = true;
@@ -101,10 +97,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(4, 78);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(3, 62);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 58);
+            this.button2.Size = new System.Drawing.Size(145, 47);
             this.button2.TabIndex = 5;
             this.button2.Text = "Список студентов";
             this.button2.UseVisualStyleBackColor = true;
@@ -112,10 +107,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(4, 144);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(3, 115);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(193, 58);
+            this.button3.Size = new System.Drawing.Size(145, 47);
             this.button3.TabIndex = 6;
             this.button3.Text = "Список перподавателя";
             this.button3.UseVisualStyleBackColor = true;
@@ -123,16 +117,16 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1013, 646);
+            this.ClientSize = new System.Drawing.Size(760, 525);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);

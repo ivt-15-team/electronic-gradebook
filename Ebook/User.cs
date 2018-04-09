@@ -46,6 +46,12 @@ namespace Ebook
                 password = value;
             }
         }
+
+        public User()
+        {
+
+        }
+
         public User(string login1, string role1,string pass)
         {
 

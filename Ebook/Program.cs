@@ -8,6 +8,8 @@ namespace Ebook
 {
     static class Program
     {
+        static public string login;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +18,7 @@ namespace Ebook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Autorization());
         }
     }
 }
