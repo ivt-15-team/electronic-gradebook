@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Ebook
 {
+    
     public partial class SubjectList : Form
     {
         public SubjectList()
@@ -47,4 +48,67 @@ namespace Ebook
             this.Hide();
         }
     }
+
+    public class SubjectRepository : ISubjectRepository, IDisposable
+    {
+        private EbookContext context;
+
+        public SubjectRepository(EbookContext context)
+        {
+            this.context = context;
+        }
+
+        public IEnumerable<Subject> GetSubject()
+        {
+            return context.Subject.ToList();
+        }
+
+        public Subject GetSubjectByID(int id)
+        {
+            return context.Subject.Find(id);
+        }
+
+        public void InsertSubject(Subject subject)
+        {
+            context.Subject.Add(subject);
+        }
+
+        public void DeleteSubject(int subjectID)
+        {
+            Subject subject = context.Subject.Find(subjectID);
+            context.Subject.Remove(subject);
+        }
+
+        public void UpdateSubject(Subject subject)
+        {
+            context.Entry(subject).State = EntityState.Modified;
+        }
+
+        public void Save()
+        {
+            context.SaveChanges();
+        }
+
+        private bool disposed = false;
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                if (disposing)
+                {
+                    context.Dispose();
+                }
+            }
+            this.disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+    }
+
+
 }
