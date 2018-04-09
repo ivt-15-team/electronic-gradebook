@@ -7,7 +7,7 @@ namespace Ebook
     {
         [Key]
         public int Id { get; set; }
-
+        
         private string group_name;
         private int year;
         private EDU_plan edu_plan;
@@ -44,6 +44,8 @@ namespace Ebook
             edu_plan = Edu_plan;
             employee = employe1;
         }
+
+
 
 
     }
