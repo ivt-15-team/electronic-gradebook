@@ -89,6 +89,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Group.cs" />
+    <Compile Include="Group_repository.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="lektor_list.cs">
       <SubType>Form</SubType>
     </Compile>
