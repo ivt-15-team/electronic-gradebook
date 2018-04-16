@@ -20,21 +20,13 @@ namespace Ebook
         private void button1_Click(object sender, EventArgs e)
         {
             button1.Text = "sd";
+            k = (k + 1) % 3;
             if (k == 0)
-            {
                 button1.Text = ">";
-                k++;
-            }
             if (k == 1)
-            {
                 button1.Text = "<";
-                k++;
-            }
             if (k == 2)
-            {
                 button1.Text = "=";
-                k = 0;
-            }
         }
 
         private void trackBar1_ValueChanged(object sender, EventArgs e)
@@ -44,36 +36,22 @@ namespace Ebook
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (sender is TextBox)
-
-                if ((sender as TextBox).Text == "Фамилия")
-                    (sender as TextBox).Text = "";
-            if ((sender as TextBox).Text == "Имя")
-                (sender as TextBox).Text = "";
-
-
+            if (sender is TextBox textBox)
+            {
+                if (textBox.Text == "Фамилия" || textBox.Text == "Имя")
+                    textBox.Text = string.Empty;
+            }
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (sender is TextBox)
-                if((sender as TextBox).Name == "textBox1")
-                {
-                    if ((sender as TextBox).Text == "")
-                    {                        
-                        textBox1.Text = "Фамилия";
-                    }
-                    
-                }
-            if ((sender as TextBox).Name == "textBox2")
+            if (sender is TextBox textBox)
             {
-                if ((sender as TextBox).Text == "")
-                {
-                    (sender as TextBox).Text = "Имя";
-                }
-
+                if (textBox.Name == "textBox1" && textBox.Text == string.Empty)
+                    textBox.Text = "Фамилия";
+                if (textBox.Name == "textBox2" && textBox.Text == string.Empty)
+                    textBox.Text = "Имя";
             }
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)

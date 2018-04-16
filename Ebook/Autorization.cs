@@ -16,7 +16,7 @@ namespace Ebook
         private string pass;
 
         EbookContext context;
-        
+
         public Autorization()
         {
             InitializeComponent();
@@ -28,18 +28,34 @@ namespace Ebook
             return a;
         }
 
-        private void button1_Click (object sender, EventArgs e) 
+        private void UpdateWarningText(string message)
         {
-            label1.Visible = false;
-            if ((textBox1.Text != null) && (textBox2.Text != null))
+            label1.Text = message;
+            label1.Visible = !string.IsNullOrEmpty(message);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UpdateWarningText(string.Empty);
+            string login = textBox1.Text;
+            string password = textBox2.Text;
+            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
+            {
+                UpdateWarningText("Не все поля заполнены");
+            }
+            else
             {
                 try
                 {
-                    var user = context.Users.ToList().Find(u => u.Login == textBox1.Text);
-                    if (user != null)
+                    User user = context.Users.Where(u => u.Login == login).FirstOrDefault();
+                    if (user == null)
                     {
-                        string hPass = hash(textBox2.Text);
-                        if (user.Password == hPass)
+                        UpdateWarningText("Неверный логин/пароль");
+                    }
+                    else
+                    {
+                        string passwordHashed = hash(password);
+                        if (user.Password == passwordHashed)
                         {
                             Program.login = user.Login;
                             Form1 frm = new Form1();
@@ -48,26 +64,14 @@ namespace Ebook
                         }
                         else
                         {
-                            label1.Text = "Неверный логин/пароль!";
-                            label1.Visible = true;
+                            UpdateWarningText("Неверный логин/пароль");
                         }
                     }
-                    else
-                    {
-                        label1.Text = "Такого пользователя не существует!";
-                        label1.Visible = true;
-                    }
                 }
-                catch
+                catch (Exception exc)
                 {
-                    label1.Text = "Ошибка подключения к БД!" + e;
-                    label1.Visible = true;
-                }                  
-            }
-            else
-            {                
-                label1.Text = "Не все поля заполнены!";
-                label1.Visible = true;
+                    UpdateWarningText($"Ошибка подключения к БД! {exc.ToString()}");
+                }
             }
         }
     }
