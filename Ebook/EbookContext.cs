@@ -2,7 +2,7 @@
 
 namespace Ebook
 {
-    class EbookContext : DbContext
+    public class EbookContext : DbContext
     {
         public EbookContext() : base("EbookConnection")
         {
@@ -20,6 +20,6 @@ namespace Ebook
         public DbSet<Status> Statuses { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Subject> Subjects { get; set; }
-
+        
     }
 }

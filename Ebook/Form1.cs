@@ -41,7 +41,21 @@ namespace Ebook
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            /*Разграничение прав доступа
+             
+            if (Program.access == 1)
+            {
+                button.Enabled = false;
+            }
+            else if (Program.access == 2)
+            {
+                button.Enabled = false;
+            }
+            else if (Program.access == 3)
+            {
+                button.Enabled = false;
+            }
+            */
         }
 
         private void button1_Click(object sender, EventArgs e)

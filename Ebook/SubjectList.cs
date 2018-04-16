@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace Ebook
 {
@@ -60,23 +61,23 @@ namespace Ebook
 
         public IEnumerable<Subject> GetSubject()
         {
-            return context.Subject.ToList();
+            return context.Subjects.ToList();
         }
 
         public Subject GetSubjectByID(int id)
         {
-            return context.Subject.Find(id);
+            return context.Subjects.Find(id);
         }
 
         public void InsertSubject(Subject subject)
         {
-            context.Subject.Add(subject);
+            context.Subjects.Add(subject);
         }
 
         public void DeleteSubject(int subjectID)
         {
-            Subject subject = context.Subject.Find(subjectID);
-            context.Subject.Remove(subject);
+            Subject subject = context.Subjects.Find(subjectID);
+            context.Subjects.Remove(subject);
         }
 
         public void UpdateSubject(Subject subject)

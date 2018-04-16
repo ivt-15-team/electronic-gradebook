@@ -9,16 +9,18 @@ namespace Ebook
     static class Program
     {
         static public string login;
+        static public string access;
 
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {   
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Autorization());
+            //Application.Run(new Autorization());
+            Application.Run(new Form1());
         }
     }
 }
