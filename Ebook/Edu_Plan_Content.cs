@@ -7,7 +7,8 @@ namespace Ebook
     {
         [Key]
         public int Id { get; set; }
-		private EDU_plan _eduPlan;
+
+        private EDU_plan eduPlan;
         private Subject subject;
         private Employee employee;
         private ControlType controlType;
@@ -36,16 +37,5 @@ namespace Ebook
                 this._total_hours = value;
             }
         }
-		public EDU_plan eduPlan
-		{
-			get
-			{
-				return this._eduPlan;
-			}
-			set
-			{
-				this._eduPlan = value;
-			}
-		}
-	}
+    }
 }

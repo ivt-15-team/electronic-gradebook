@@ -48,17 +48,9 @@ namespace Ebook
         {
             this.Hide();
         }
+    }
 
-		private void button2_Click(object sender, EventArgs e)
-		{
-			SubjectAdd frm = new SubjectAdd();
-			frm.MdiParent = this.MdiParent;
-			frm.WindowState = FormWindowState.Maximized;
-			frm.Show();
-		}
-	}
-
-	public class SubjectRepository : ISubjectRepository, IDisposable
+    public class SubjectRepository : ISubjectRepository, IDisposable
     {
         private EbookContext context;
 

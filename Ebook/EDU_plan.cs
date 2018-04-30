@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Ebook
@@ -33,37 +32,13 @@ namespace Ebook
                 begin_year = value;
             }
         }
-		public List<Edu_Plan_Content> content;
-
-		public EDU_plan(string spec_nam, string begin_yea)
+        public EDU_plan(string spec_nam, string begin_yea)
         {
+
+
             spec_name = spec_nam;
             begin_year = begin_yea;
+           
         }
-
-		public void AddContent(string _subject_id, string _total_hours)
-		{
-			string S;
-
-			Edu_Plan_Content _content = new Edu_Plan_Content();
-
-			// Console.WriteLine("Введите ИД предмета");
-			_content.subject_id = _subject_id;
-
-			// Console.WriteLine("Введите количество часов предмета");
-			S = Console.ReadLine();
-			_content.total_hours = Convert.ToInt32(_total_hours);
-
-
-			_content.eduPlan = this;
-
-			content.Add(_content);
-		}
-
-		public void AddContent(Edu_Plan_Content _content)
-		{
-			_content.eduPlan = this;
-			content.Add(_content);
-		}
     }
 }
