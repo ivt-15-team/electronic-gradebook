@@ -73,5 +73,27 @@ namespace Ebook
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EbookContext context = new EbookContext();
+            Student st = new Student(textBox1.Text, textBox2.Text, textBox3.Text, new DateTime(2001, 1, 1), comboBox1.Text, comboBox2.Text);
+            context.Students.Add(st);
+            context.SaveChanges();
+            
+        }
+
+        private void Studentlist_Load(object sender, EventArgs e)
+        {
+            EbookContext context = new EbookContext();
+            dataGridView1.DataSource = context.Students.ToList();
+            
+            //List<Student> s = (List<Student>)context.Students.;
+            //comboBox1.Items.Clear();
+            //foreach (Subject subj in s)
+            //{
+            //    comboBox1.Items.Add(subj.Name);
+            //}
+        }
     }
 }

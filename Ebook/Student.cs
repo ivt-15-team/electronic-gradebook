@@ -10,6 +10,11 @@ namespace Ebook
         //THAT'S A BAD IDEA
         public string Status { get; set; }
 
+        public Student()
+        {
+
+        }
+
         public Student(string _fname, string _sname, string _mname, DateTime _bdate, string groupName, string status) : base(_fname, _sname, _mname, _bdate)
         {  
             GroupName = groupName;
