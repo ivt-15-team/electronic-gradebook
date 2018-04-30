@@ -88,5 +88,11 @@ namespace Ebook
         {
             Application.Exit();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            RequsetParser RP = new RequsetParser();
+            textBox1.Text = (RP.request("ИМИ"));
+        }
     }
 }
