@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -89,6 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EbookDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EbookDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EbookDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EDU_actions.cs" />
     <Compile Include="EDU_plan.cs" />
     <Compile Include="Edu_Plan_Content.cs" />
@@ -116,6 +121,23 @@
       <DependentUpon>lektor_list.cs</DependentUpon>
     </Compile>
     <Compile Include="Lessons.cs" />
+<<<<<<< HEAD
+    <Compile Include="Migrations\201804300910539_v.cs" />
+    <Compile Include="Migrations\201804300910539_v.Designer.cs">
+      <DependentUpon>201804300910539_v.cs</DependentUpon>
+=======
+    <Compile Include="mark.cs" />
+    <Compile Include="Marks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marks.Designer.cs">
+      <DependentUpon>Marks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804300931532_1.cs" />
+    <Compile Include="Migrations\201804300931532_1.Designer.cs">
+      <DependentUpon>201804300931532_1.cs</DependentUpon>
+>>>>>>> b9470f01f19353f8f32f513da54c13abdb7f53aa
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="person.cs" />
     <Compile Include="Program.cs" />
@@ -155,6 +177,17 @@
     <EmbeddedResource Include="lektor_list.resx">
       <DependentUpon>lektor_list.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Migrations\201804300910539_v.resx">
+      <DependentUpon>201804300910539_v.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Marks.resx">
+      <DependentUpon>Marks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804300931532_1.resx">
+      <DependentUpon>201804300931532_1.cs</DependentUpon>
+>>>>>>> b9470f01f19353f8f32f513da54c13abdb7f53aa
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -184,6 +217,17 @@
     <None Include="EbookDataSet.xss">
       <DependentUpon>EbookDataSet.xsd</DependentUpon>
     </None>
+    <None Include="EbookDataSet1.xsc">
+      <DependentUpon>EbookDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EbookDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EbookDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EbookDataSet1.xss">
+      <DependentUpon>EbookDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -201,7 +245,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 и x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -212,6 +256,15 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ebook.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ebook_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Ebook.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

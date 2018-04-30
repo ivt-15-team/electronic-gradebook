@@ -8,49 +8,56 @@ namespace Ebook
         [Key]
         public int Id { get; set; }
 
+        public Person()
+        {
+
+        }
+
         User PersonOwner;
-        string FirstName
+        private DateTime birthDate;
+        private string firstName, secondName, middleName;
+        public string FirstName
         {
             get
             {
-                return this.FirstName;
+                return firstName;
             }
             set
             {
-                this.FirstName = value;
+                firstName = value;
             }
         }
         string SecondName
         {
             get
             {
-                return this.SecondName;
+                return secondName;
             }
             set
             {
-                this.SecondName = value;
+                secondName = value;
             }
         }
         string MiddleName
         {
             get
             {
-                return this.MiddleName;
+                return middleName;
             }
             set
             {
-                this.MiddleName = value;
+                middleName = value;
             }
         }
         DateTime BirthDate
         {
             get
             {
-                return this.BirthDate;
+                return birthDate;
             }
             set
             {
-                this.BirthDate = value;
+                birthDate = value;
             }
         }
 

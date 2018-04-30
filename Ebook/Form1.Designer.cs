@@ -114,7 +114,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(145, 47);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Список перподавателя";
+            this.button3.Text = "Список преподавателя";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
