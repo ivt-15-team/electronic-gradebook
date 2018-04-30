@@ -15,9 +15,8 @@ namespace Ebook
         SubjectList sub = new SubjectList();
         Studentlist sud = new Studentlist();
         LectorList sul = new LectorList();
-		Marks sum = new Marks();
 
-		public void check(Form a)
+        public void check(Form a)
         {
             if (this.ActiveMdiChild != null && this.ActiveMdiChild != a)
             {
@@ -89,10 +88,5 @@ namespace Ebook
         {
             Application.Exit();
         }
-
-		private void button4_Click(object sender, EventArgs e)
-		{
-			check(sum);
-		}
-	}
+    }
 }

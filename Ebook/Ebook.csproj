@@ -81,6 +81,12 @@
     <Compile Include="EDU_actions.cs" />
     <Compile Include="EDU_plan.cs" />
     <Compile Include="Edu_Plan_Content.cs" />
+    <Compile Include="Edu_plan_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edu_plan_Form.Designer.cs">
+      <DependentUpon>Edu_plan_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="employee.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -99,20 +105,9 @@
       <DependentUpon>lektor_list.cs</DependentUpon>
     </Compile>
     <Compile Include="Lessons.cs" />
-    <Compile Include="mark.cs" />
-    <Compile Include="Marks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Marks.Designer.cs">
-      <DependentUpon>Marks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804230929568_Marks_mig.cs" />
-    <Compile Include="Migrations\201804230929568_Marks_mig.Designer.cs">
-      <DependentUpon>201804230929568_Marks_mig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804230951225_mig_.cs" />
-    <Compile Include="Migrations\201804230951225_mig_.Designer.cs">
-      <DependentUpon>201804230951225_mig_.cs</DependentUpon>
+    <Compile Include="Migrations\201804230855444_FFFFUUUU.cs" />
+    <Compile Include="Migrations\201804230855444_FFFFUUUU.Designer.cs">
+      <DependentUpon>201804230855444_FFFFUUUU.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="person.cs" />
@@ -127,6 +122,12 @@
       <DependentUpon>Student_list.cs</DependentUpon>
     </Compile>
     <Compile Include="Subject.cs" />
+    <Compile Include="SubjectAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectAdd.Designer.cs">
+      <DependentUpon>SubjectAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubjectList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,20 +138,17 @@
     <EmbeddedResource Include="Autorization.resx">
       <DependentUpon>Autorization.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edu_plan_Form.resx">
+      <DependentUpon>Edu_plan_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lektor_list.resx">
       <DependentUpon>lektor_list.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Marks.resx">
-      <DependentUpon>Marks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804230929568_Marks_mig.resx">
-      <DependentUpon>201804230929568_Marks_mig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804230951225_mig_.resx">
-      <DependentUpon>201804230951225_mig_.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804230855444_FFFFUUUU.resx">
+      <DependentUpon>201804230855444_FFFFUUUU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +161,9 @@
     </Compile>
     <EmbeddedResource Include="Student_list.resx">
       <DependentUpon>Student_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectAdd.resx">
+      <DependentUpon>SubjectAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectList.resx">
       <DependentUpon>SubjectList.cs</DependentUpon>
