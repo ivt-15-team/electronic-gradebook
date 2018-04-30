@@ -20,6 +20,7 @@ namespace Ebook
         public DbSet<Status> Statuses { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Subject> Subjects { get; set; }
-        
+        public DbSet<mark> Marks { get; set; }
+
     }
 }
