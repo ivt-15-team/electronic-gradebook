@@ -56,9 +56,14 @@ namespace Ebook
 			frm.WindowState = FormWindowState.Maximized;
 			frm.Show();
 		}
-	}
 
-	public class SubjectRepository : ISubjectRepository, IDisposable
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
+
+    public class SubjectRepository : ISubjectRepository, IDisposable
     {
         private EbookContext context;
 
