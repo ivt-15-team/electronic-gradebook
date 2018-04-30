@@ -9,7 +9,7 @@ namespace Ebook.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Ebook.EbookContext context)

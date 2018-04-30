@@ -37,11 +37,23 @@ namespace Ebook
 
 		private void TextChanged(object sender, EventArgs e)
 		{
-			if (proverka == false)
+			if (!proverka)
 			{
 				textBox1.Text = "";
 				proverka = true;
 			}
 		}
-	}
+
+        private void SubjectAdd_Load(object sender, EventArgs e)
+        {
+            int n, i;
+            List<Subject> s = (List<Subject>)repo.GetSubject();
+            comboBox1.Items.Clear();
+            foreach (Subject subj in s)
+            {
+                comboBox1.Items.Add(subj.Name);
+            }
+            
+        }
+    }
 }

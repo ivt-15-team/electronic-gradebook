@@ -78,6 +78,11 @@
     </Compile>
     <Compile Include="ControlType.cs" />
     <Compile Include="EbookContext.cs" />
+    <Compile Include="EbookDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EbookDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EDU_actions.cs" />
     <Compile Include="EDU_plan.cs" />
     <Compile Include="Edu_Plan_Content.cs" />
@@ -105,10 +110,6 @@
       <DependentUpon>lektor_list.cs</DependentUpon>
     </Compile>
     <Compile Include="Lessons.cs" />
-    <Compile Include="Migrations\201804230855444_FFFFUUUU.cs" />
-    <Compile Include="Migrations\201804230855444_FFFFUUUU.Designer.cs">
-      <DependentUpon>201804230855444_FFFFUUUU.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="person.cs" />
     <Compile Include="Program.cs" />
@@ -147,9 +148,6 @@
     <EmbeddedResource Include="lektor_list.resx">
       <DependentUpon>lektor_list.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804230855444_FFFFUUUU.resx">
-      <DependentUpon>201804230855444_FFFFUUUU.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -168,6 +166,17 @@
     <EmbeddedResource Include="SubjectList.resx">
       <DependentUpon>SubjectList.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="EbookDataSet.xsc">
+      <DependentUpon>EbookDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EbookDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EbookDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EbookDataSet.xss">
+      <DependentUpon>EbookDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
