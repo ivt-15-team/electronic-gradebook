@@ -12,7 +12,10 @@ namespace Ebook
         private string cathedra;
         private string position;
 
-        
+        public Employee()
+        {
+
+        }
 
         public Employee(string _fname, string _sname, string _mname, DateTime _bdate, string k_cathedra, string k_position) : base(_fname, _sname, _mname, _bdate)
         {
