@@ -21,8 +21,8 @@ namespace Ebook
                 spec_name = value;
             }
         }
-        private string begin_year;
-        public string Begin_year
+        private int begin_year;
+        public int Begin_year
         {
             get
             {
@@ -38,7 +38,8 @@ namespace Ebook
 		public EDU_plan(string spec_nam, string begin_yea)
         {
             spec_name = spec_nam;
-            begin_year = begin_yea;
+            begin_year = Convert.ToInt32(begin_yea);
+            content = new List<Edu_Plan_Content>();
         }
 
 		public void AddContent(string _subject_id, string _total_hours)
@@ -54,9 +55,8 @@ namespace Ebook
 			S = Console.ReadLine();
 			_content.total_hours = Convert.ToInt32(_total_hours);
 
-
 			_content.eduPlan = this;
-
+            
 			content.Add(_content);
 		}
 
