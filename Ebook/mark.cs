@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 namespace Ebook
 {
@@ -11,61 +11,80 @@ namespace Ebook
         [Key]
         public int Id { get; set; }
 
-        private string Student
-        {
-            get
-            {
-                return Student;
-            }
-            set
-            {
-                Student = value;
-            }
-        }
-        public string Lesson
-        {
-            get
-            {
-                return Lesson;
-            }
-            set
-            {
-                Lesson = value;
-            }
-        }
-        public int Points;
-        public string Edu_actions
-        {
-            get
-            {
-                return Edu_actions;
-            }
-            set
-            {
-                Edu_actions = value;
-            }
-        }
-        public DateTime Lesson_date {
-            get
-            {
-                return Lesson_date;
-            }
-            set
-            {
-                Lesson_date = value;
-            }
-        }
+		public string Group_name { get; set; }
+		public int Year { get; set; }
+		public Student Student { get; set; }
+		public EDU_actions Action { get; set; }
+		public int Points { get; set; }
 
+		public mark() { }
 
+		public mark(string groupname, int year_enter, EDU_actions Action)
+		{
 
-        public mark (int points, DateTime lesson_date,  Student student, Schedule lesson, EDU_actions actions)
-        {
-            Points = points;
-            Lesson_date = lesson_date;
-            Student = student;
-            Lesson = lesson;
-            Edu_actions = actions;
+			Group_name = groupname;
+			Year = year_enter;
+			this.Action = Action;
+		}
+	}
+	public class MarkRepository : IRepository<mark>, IDisposable
+	{
+		private EbookContext context;
 
-        }
-    }
+		public MarkRepository(EbookContext context)
+		{
+			this.context = context;
+		}
+
+		public IEnumerable<mark> GetEntities()
+		{
+			return context.Marks.ToList();
+		}
+
+		public mark GetEntityById(int id)
+		{
+			return context.Marks.Find(id);
+		}
+
+		public void InsertEntity(mark mark)
+		{
+			context.Marks.Add(mark);
+		}
+
+		public void DeleteEntity(int markID)
+		{
+			mark mark = context.Marks.Find(markID);
+			context.Marks.Remove(mark);
+		}
+
+		public void UpdateEntity(mark mark)
+		{
+			context.Entry(mark).State = EntityState.Modified;
+		}
+
+		public void Save()
+		{
+			context.SaveChanges();
+		}
+
+		private bool disposed = false;
+
+		protected virtual void Dispose(bool disposing)
+		{
+			if (!this.disposed)
+			{
+				if (disposing)
+				{
+					context.Dispose();
+				}
+			}
+			this.disposed = true;
+		}
+
+		public void Dispose()
+		{
+			Dispose(true);
+			GC.SuppressFinalize(this);
+		}
+	}
 }
