@@ -10,47 +10,25 @@ using System.Windows.Forms;
 
 namespace Ebook
 {
-	public partial class Edu_plan_Form : Form
-	{
+    public partial class Edu_plan_Form : Form
+    {
+        // To Program.cs
+        //static public List<EDU_plan> EDU_plans = new List<EDU_plan>();
         EDU_plan current_plan;
-		public Edu_plan_Form()
-		{
-			InitializeComponent();
-		}
+        public Edu_plan_Form()
+        {
+            InitializeComponent();
+        }
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-            MessageBox.Show("Content Add Attempt");
+        private void button1_Click(object sender, EventArgs e)
+        {
             // Добавить в план
             current_plan.AddContent(textBox1.Text, textBox2.Text);
-
-            MessageBox.Show("Content Added");
 
             // Взять из плана (чтоб наверняка)
             Edu_Plan_Content _tmp = current_plan.content.Last();
 
-            MessageBox.Show("Content Get");
-
-            // Стиль
-            RowStyle temp = tableLayoutPanel1.RowStyles[tableLayoutPanel1.RowCount - 1];
-
-            MessageBox.Show("Style Grabbed");
-
-            // increase panel rows count by one
-            tableLayoutPanel1.RowCount++;
-
-            MessageBox.Show("Row Increased");
-
-            // add a new RowStyle as a copy of the previous one
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(temp.SizeType, temp.Height));
-
-            MessageBox.Show("Row Style Add");
-
-            // add your two controls
-            tableLayoutPanel1.Controls.Add(new Label() { Text = _tmp.subject_id }, 0, tableLayoutPanel1.RowCount - 1);
-            MessageBox.Show("Row Column 1 Add");
-            tableLayoutPanel1.Controls.Add(new Label() { Text = Convert.ToString(_tmp.total_hours)}, 1, tableLayoutPanel1.RowCount - 1);
-            MessageBox.Show("Row Column 2 Add");
+            reload_EDU_plan_content();      
         }
 
         private void Edu_plan_Form_Load(object sender, EventArgs e)
@@ -60,11 +38,29 @@ namespace Ebook
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (current_plan == null)
+             //current_plan = new EDU_plan(textBox3.Text, textBox4.Text);
+        }
+
+        private void reload_EDU_plan()
+        {
+            foreach(var _tmp in Ebook.Program.EDU_plans)
             {
-                current_plan = new EDU_plan(textBox3.Text, textBox4.Text);
-                label1.Text = current_plan.Spec_name + " " + Convert.ToString(current_plan.Begin_year);
-            }  
+                DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+                row.Cells[0].Value = _tmp.Spec_name;
+                row.Cells[1].Value = Convert.ToString(_tmp.Begin_year);
+                dataGridView1.Rows.Add(row);
+            }
+        }
+
+        private void reload_EDU_plan_content()
+        {
+            foreach (var _tmp in current_plan.content)
+            {
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                row.Cells[0].Value = _tmp.subject_id;
+                row.Cells[1].Value = Convert.ToString(_tmp.total_hours);
+                dataGridView1.Rows.Add(row);
+            }
         }
     }
 }
