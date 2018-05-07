@@ -92,7 +92,7 @@ namespace Ebook
         private void button4_Click(object sender, EventArgs e)
         {
             RequsetParser RP = new RequsetParser();
-            textBox1.Text = (RP.request("ИМИ"));
+            //textBox1.Text = (RP.request("ИМИ"));
         }
     }
 }

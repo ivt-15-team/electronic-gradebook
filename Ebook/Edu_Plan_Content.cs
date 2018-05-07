@@ -6,7 +6,7 @@ namespace Ebook
     public class Edu_Plan_Content
     {
         [Key]
-        public int Id { get; set; }
+        public int UId { get; set; }
 		private EDU_plan _eduPlan;
         private Subject subject;
         private Employee employee;

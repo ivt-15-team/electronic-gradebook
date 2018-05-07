@@ -28,7 +28,7 @@ namespace Ebook
             // Взять из плана (чтоб наверняка)
             Edu_Plan_Content _tmp = current_plan.content.Last();
 
-            reload_EDU_plan_content();      
+            reload_EDU_plan_content();
         }
 
         private void Edu_plan_Form_Load(object sender, EventArgs e)
@@ -38,29 +38,50 @@ namespace Ebook
 
         private void button2_Click(object sender, EventArgs e)
         {
-             //current_plan = new EDU_plan(textBox3.Text, textBox4.Text);
+            EDU_plan tmp_EDU_plan = new EDU_plan(textBox3.Text, textBox4.Text);
+
+            Program.EDU_plans.Add(tmp_EDU_plan);
+
+            // Взять из списка планов (чтоб наверняка)
+            current_plan = Program.EDU_plans.Last();
+
+            reload_EDU_plan();
         }
 
-        //private void reload_EDU_plan()
-        //{
-        //    foreach(var _tmp in Ebook.Program.EDU_plans)
-        //    {
-        //        DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
-        //        row.Cells[0].Value = _tmp.Spec_name;
-        //        row.Cells[1].Value = Convert.ToString(_tmp.Begin_year);
-        //        dataGridView1.Rows.Add(row);
-        //    }
-        //}
+        private void reload_EDU_plan()
+        {
+            dataGridView2.Rows.Clear();
+            foreach (var _tmp in Program.EDU_plans)
+            {
+                DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+                row.Cells[0].Value = _tmp.UId;
+                row.Cells[1].Value = _tmp.Spec_name;
+                row.Cells[2].Value = Convert.ToString(_tmp.Begin_year);
+                dataGridView2.Rows.Add(row);
+            }
+        }
 
         private void reload_EDU_plan_content()
         {
+            dataGridView1.Rows.Clear();
             foreach (var _tmp in current_plan.content)
             {
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-                row.Cells[0].Value = _tmp.subject_id;
-                row.Cells[1].Value = Convert.ToString(_tmp.total_hours);
+                row.Cells[0].Value = Convert.ToString(_tmp.UId);
+                row.Cells[1].Value = _tmp.subject_id;
+                row.Cells[2].Value = Convert.ToString(_tmp.total_hours);
                 dataGridView1.Rows.Add(row);
             }
+        }
+
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridViewRow row = (DataGridViewRow)dataGridView2.CurrentRow;
+            int _id = Convert.ToInt32(row.Cells[0].Value);
+
+            current_plan = Program.EDU_plans.Find(x => x.UId == _id);
+
+            reload_EDU_plan_content();
         }
     }
 }

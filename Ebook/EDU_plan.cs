@@ -7,7 +7,7 @@ namespace Ebook
     public class EDU_plan
     {
         [Key]
-        public int Id { get; set; }
+        public int UId { get; set; }
 
         private string spec_name;
         public string Spec_name
@@ -33,10 +33,16 @@ namespace Ebook
                 begin_year = value;
             }
         }
-		public List<Edu_Plan_Content> content;
+        public List<Edu_Plan_Content> content;
 
-		public EDU_plan(string spec_nam, string begin_yea)
+        public EDU_plan()
         {
+
+        }
+
+        public EDU_plan(string spec_nam, string begin_yea)
+        {
+//            UId = Program.EDU_plans.Count + 1;
             spec_name = spec_nam;
             begin_year = Convert.ToInt32(begin_yea);
             content = new List<Edu_Plan_Content>();
@@ -46,10 +52,12 @@ namespace Ebook
 		{
 			string S;
 
-			Edu_Plan_Content _content = new Edu_Plan_Content();
+            Edu_Plan_Content _content = new Edu_Plan_Content();
 
-			// Console.WriteLine("Введите ИД предмета");
-			_content.subject_id = _subject_id;
+            _content.UId = content.Count + 1;
+
+            // Console.WriteLine("Введите ИД предмета");
+            _content.subject_id = _subject_id;
 
 			// Console.WriteLine("Введите количество часов предмета");
 			S = Console.ReadLine();
@@ -58,7 +66,7 @@ namespace Ebook
 			_content.eduPlan = this;
             
 			content.Add(_content);
-		}
+        }
 
 		public void AddContent(Edu_Plan_Content _content)
 		{
