@@ -41,16 +41,16 @@ namespace Ebook
              //current_plan = new EDU_plan(textBox3.Text, textBox4.Text);
         }
 
-        private void reload_EDU_plan()
-        {
-            foreach(var _tmp in Ebook.Program.EDU_plans)
-            {
-                DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
-                row.Cells[0].Value = _tmp.Spec_name;
-                row.Cells[1].Value = Convert.ToString(_tmp.Begin_year);
-                dataGridView1.Rows.Add(row);
-            }
-        }
+        //private void reload_EDU_plan()
+        //{
+        //    foreach(var _tmp in Ebook.Program.EDU_plans)
+        //    {
+        //        DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+        //        row.Cells[0].Value = _tmp.Spec_name;
+        //        row.Cells[1].Value = Convert.ToString(_tmp.Begin_year);
+        //        dataGridView1.Rows.Add(row);
+        //    }
+        //}
 
         private void reload_EDU_plan_content()
         {

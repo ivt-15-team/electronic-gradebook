@@ -121,11 +121,6 @@
       <DependentUpon>lektor_list.cs</DependentUpon>
     </Compile>
     <Compile Include="Lessons.cs" />
-<<<<<<< HEAD
-    <Compile Include="Migrations\201804300910539_v.cs" />
-    <Compile Include="Migrations\201804300910539_v.Designer.cs">
-      <DependentUpon>201804300910539_v.cs</DependentUpon>
-=======
     <Compile Include="mark.cs" />
     <Compile Include="Marks.cs">
       <SubType>Form</SubType>
@@ -136,7 +131,6 @@
     <Compile Include="Migrations\201804300931532_1.cs" />
     <Compile Include="Migrations\201804300931532_1.Designer.cs">
       <DependentUpon>201804300931532_1.cs</DependentUpon>
->>>>>>> b9470f01f19353f8f32f513da54c13abdb7f53aa
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="person.cs" />
@@ -177,16 +171,11 @@
     <EmbeddedResource Include="lektor_list.resx">
       <DependentUpon>lektor_list.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Migrations\201804300910539_v.resx">
-      <DependentUpon>201804300910539_v.cs</DependentUpon>
-=======
     <EmbeddedResource Include="Marks.resx">
       <DependentUpon>Marks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804300931532_1.resx">
       <DependentUpon>201804300931532_1.cs</DependentUpon>
->>>>>>> b9470f01f19353f8f32f513da54c13abdb7f53aa
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -256,15 +245,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Ebook.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Ebook_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Ebook.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
