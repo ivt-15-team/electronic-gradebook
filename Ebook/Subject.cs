@@ -13,5 +13,6 @@ namespace Ebook
         {
             Name = name;
         }
+        public Subject() { }
     }
 }

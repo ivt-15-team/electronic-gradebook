@@ -14,21 +14,51 @@ namespace Ebook
         }
 
         User PersonOwner;
+        private DateTime birthDate;
+        private string firstName, secondName, middleName;
         public string FirstName
         {
-            get; set;
+            get
+            {
+                return firstName;
+            }
+            set
+            {
+                firstName = value;
+            }
         }
-        public string SecondName
+        string SecondName
         {
-            get; set;
+            get
+            {
+                return secondName;
+            }
+            set
+            {
+                secondName = value;
+            }
         }
-        public string MiddleName
+        string MiddleName
         {
-            get; set;
+            get
+            {
+                return middleName;
+            }
+            set
+            {
+                middleName = value;
+            }
         }
-        public DateTime BirthDate
+        DateTime BirthDate
         {
-            get; set;
+            get
+            {
+                return birthDate;
+            }
+            set
+            {
+                birthDate = value;
+            }
         }
 
         public Person(string _fname, string _sname, string _mname, DateTime _bdate)

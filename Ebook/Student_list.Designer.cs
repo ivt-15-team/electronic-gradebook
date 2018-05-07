@@ -47,6 +47,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -147,6 +150,9 @@
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.splitContainer1, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.button2, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.textBox3, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.textBox4, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 0, 9);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -272,6 +278,30 @@
             this.button2.Text = "Показать";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(3, 444);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 20;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(3, 507);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.TabIndex = 21;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(3, 570);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Studentlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -284,6 +314,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Studentlist";
             this.Text = "Student_list";
+            this.Load += new System.EventHandler(this.Studentlist_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -319,5 +350,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button3;
     }
 }
