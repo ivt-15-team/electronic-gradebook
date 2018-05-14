@@ -14,9 +14,14 @@ namespace Ebook
     
     public partial class SubjectList : Form
     {
+        EbookContext context;
+        SubjectRepository repo;
+        List<Subject> s;
         public SubjectList()
         {
             InitializeComponent();
+            context = new EbookContext();
+            repo = new SubjectRepository(context);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -31,12 +36,19 @@ namespace Ebook
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            var subj = dataGridView1.Rows[e.RowIndex].DataBoundItem as Subject;
+            SubjectEdit frm2 = new SubjectEdit(subj);
+            //DataGridViewSelectedCellCollection;
+            frm2.MdiParent = this.MdiParent;
+            frm2.WindowState = FormWindowState.Maximized;
+            frm2.Show();
         }
+
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = repo.GetSubject();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -46,7 +58,8 @@ namespace Ebook
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            repo.Save();
+            this.Close();
         }
 
 		private void button2_Click(object sender, EventArgs e)
@@ -60,6 +73,16 @@ namespace Ebook
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void close(object sender, FormClosedEventArgs e)
+        {
+            repo.Save();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = repo.GetSubject();
         }
     }
 

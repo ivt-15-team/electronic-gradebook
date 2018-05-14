@@ -152,6 +152,12 @@
     <Compile Include="SubjectAdd.Designer.cs">
       <DependentUpon>SubjectAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubjectEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectEdit.Designer.cs">
+      <DependentUpon>SubjectEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubjectList.cs">
       <SubType>Form</SubType>
     </Compile>
