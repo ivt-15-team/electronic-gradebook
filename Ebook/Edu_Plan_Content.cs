@@ -59,5 +59,16 @@ namespace Ebook
                 this.employee = value;
             }
         }
+        public ControlType ControlType
+        {
+            get
+            {
+                return this.controlType;
+            }
+            set
+            {
+                this.controlType = value;
+            }
+        }
     }
 }

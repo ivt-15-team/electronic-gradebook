@@ -81,7 +81,8 @@ namespace Ebook
                 row.Cells[0].Value = Convert.ToString(_tmp.UId);
                 row.Cells[1].Value = _tmp.subject_id;
                 row.Cells[2].Value = Convert.ToString(_tmp.total_hours);
-                row.Cells[3].Value = _tmp.employee;
+                row.Cells[3].Value = _tmp.ControlType;
+                row.Cells[4].Value = _tmp.employee;
                 dataGridView1.Rows.Add(row);
             }
         }
