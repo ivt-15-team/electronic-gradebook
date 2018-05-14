@@ -37,11 +37,11 @@ namespace Ebook
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var subj = dataGridView1.Rows[e.RowIndex].DataBoundItem as Subject;
-            SubjectEdit frm2 = new SubjectEdit(subj);
+            //SubjectEdit frm2 = new SubjectEdit(subj);
             //DataGridViewSelectedCellCollection;
-            frm2.MdiParent = this.MdiParent;
-            frm2.WindowState = FormWindowState.Maximized;
-            frm2.Show();
+            //frm2.MdiParent = this.MdiParent;
+            //frm2.WindowState = FormWindowState.Maximized;
+            //frm2.Show();
         }
 
 

@@ -43,6 +43,7 @@
             this.ThirdName = new System.Windows.Forms.TextBox();
             this.Zachetka = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -96,11 +97,12 @@
             this.tableLayoutPanel2.Controls.Add(this.ThirdName, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.Zachetka, 0, 8);
             this.tableLayoutPanel2.Controls.Add(this.button3, 0, 9);
+            this.tableLayoutPanel2.Controls.Add(this.button4, 0, 10);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 10;
+            this.tableLayoutPanel2.RowCount = 11;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -111,6 +113,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(166, 630);
             this.tableLayoutPanel2.TabIndex = 1;
@@ -130,7 +133,7 @@
             // FirstName
             // 
             this.FirstName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FirstName.Location = new System.Drawing.Point(3, 66);
+            this.FirstName.Location = new System.Drawing.Point(3, 64);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(160, 22);
             this.FirstName.TabIndex = 14;
@@ -148,7 +151,7 @@
             "ИВТ-15",
             "ФИИТ-14",
             "МО-15"});
-            this.Group.Location = new System.Drawing.Point(3, 129);
+            this.Group.Location = new System.Drawing.Point(3, 125);
             this.Group.Name = "Group";
             this.Group.Size = new System.Drawing.Size(160, 24);
             this.Group.TabIndex = 15;
@@ -162,7 +165,7 @@
             "Студент",
             "Академ",
             "Отчисленный"});
-            this.Status.Location = new System.Drawing.Point(3, 192);
+            this.Status.Location = new System.Drawing.Point(3, 186);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(160, 24);
             this.Status.TabIndex = 16;
@@ -171,7 +174,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 252);
+            this.label1.Location = new System.Drawing.Point(3, 244);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 17;
@@ -179,7 +182,7 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(3, 318);
+            this.splitContainer1.Location = new System.Drawing.Point(3, 308);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -189,7 +192,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.trackBar1);
-            this.splitContainer1.Size = new System.Drawing.Size(150, 57);
+            this.splitContainer1.Size = new System.Drawing.Size(150, 55);
             this.splitContainer1.TabIndex = 18;
             // 
             // button1
@@ -197,7 +200,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 57);
+            this.button1.Size = new System.Drawing.Size(50, 55);
             this.button1.TabIndex = 0;
             this.button1.Text = "=";
             this.button1.UseVisualStyleBackColor = true;
@@ -208,15 +211,15 @@
             this.trackBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.trackBar1.Location = new System.Drawing.Point(0, 0);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(96, 57);
+            this.trackBar1.Size = new System.Drawing.Size(96, 55);
             this.trackBar1.TabIndex = 0;
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(3, 381);
+            this.button2.Location = new System.Drawing.Point(3, 369);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 57);
+            this.button2.Size = new System.Drawing.Size(160, 55);
             this.button2.TabIndex = 19;
             this.button2.Text = "Показать";
             this.button2.UseVisualStyleBackColor = true;
@@ -224,27 +227,37 @@
             // 
             // ThirdName
             // 
-            this.ThirdName.Location = new System.Drawing.Point(3, 444);
+            this.ThirdName.Location = new System.Drawing.Point(3, 430);
             this.ThirdName.Name = "ThirdName";
             this.ThirdName.Size = new System.Drawing.Size(100, 22);
             this.ThirdName.TabIndex = 20;
             // 
             // Zachetka
             // 
-            this.Zachetka.Location = new System.Drawing.Point(3, 507);
+            this.Zachetka.Location = new System.Drawing.Point(3, 491);
             this.Zachetka.Name = "Zachetka";
             this.Zachetka.Size = new System.Drawing.Size(100, 22);
             this.Zachetka.TabIndex = 21;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(3, 570);
+            this.button3.Location = new System.Drawing.Point(3, 552);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 22;
             this.button3.Text = "Добавить";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(3, 613);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 14);
+            this.button4.TabIndex = 23;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Studentlist
             // 
@@ -290,5 +303,6 @@
         private System.Windows.Forms.TextBox ThirdName;
         private System.Windows.Forms.TextBox Zachetka;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

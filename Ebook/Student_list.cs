@@ -108,10 +108,12 @@ namespace Ebook
             if (FirstName.Text != "Имя")
             {
                 fname = FirstName.Text;
+                t = t.FindAll(s => s.FirstName == fname);
             }
             if (SecondName.Text != "Фамилия")
             {
                 sname = SecondName.Text;
+                t = t.FindAll(s => s.SecondName == sname);
             }
             if (ThirdName.Text != "Отчество")
             {
@@ -121,12 +123,21 @@ namespace Ebook
             {
                 group = Group.Text;
             }
-            
-            
+            //var ss = t.FindAll(s => s.FirstName == "Мент");
+            //var ss = from sss in t
+                     //where sss.FirstName == "Мент"
+            //         select sss;
 
-            
 
-            dataGridView1.DataSource = t;
+
+
+
+            dataGridView1.DataSource =t;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource= context.Students.ToList();
         }
     }
 }
