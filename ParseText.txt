@@ -1,0 +1,65 @@
+Расписание занятий группы: ИЗФИР-М-МКМ-17-72(нечетная неделя)  на 7-05-2018<b>, изм.: 01.02.2018 14:59:46</b> 
+<table class="rasp table table-hover table-bordered">
+<thead>
+<tr class="error">
+	<th>Время</th>
+	<th>Название предмета</th>
+	<th>Преподаватель</th>
+	<th>Аудитория</th>
+	<th>Доп.информация</th>
+</tr>
+</thead><tbody><tr class="error"><th colspan=5>ВТОРНИК  8 мая 2018</th></tr>	<tr  class="success">
+		<td>14:00-15:35</td>
+		<td><a href="\error.html" target="_blank" onclick="showdis('Психолингвистика медиатекста');return false">Психолингвистика медиатекста</a> (лекция, практика)</td>
+		<td><a href="\error.html" target="_blank" onclick="showprep('731085');return false">Карнаухова А.А.</a></td>
+		<td><a href="\error.html" target="_blank" onclick="showaud('211','ГУК');return false">211 ГУК</a></td>
+		<td> С 09.01 по 30.06 <br></td>
+	</tr>	<tr  class="success">
+		<td>15:50-17:15</td>
+		<td><a href="\error.html" target="_blank" onclick="showdis('Теория и практика кросс-культурной коммуникации');return false">Теория и практика кросс-культурной коммуникации</a> (лекция, практика)</td>
+		<td><a href="\error.html" target="_blank" onclick="showprep('731091');return false">Поскачина Е.Н.</a></td>
+		<td><a href="\error.html" target="_blank" onclick="showaud('718','УЛК');return false">718 УЛК</a></td>
+		<td> С 09.01 по 30.06 <br></td>
+	</tr>	<tr  class="success">
+		<td>17:30-19:15</td>
+		<td><a href="\error.html" target="_blank" onclick="showdis('Социолингвистика');return false">Социолингвистика</a> (лекция, практика)</td>
+		<td><a href="\error.html" target="_blank" onclick="showprep('454172921');return false">Филиппова С.В.</a></td>
+		<td><a href="\error.html" target="_blank" onclick="showaud('715','УЛК');return false">715 УЛК</a></td>
+		<td> С 09.01 по 30.06 <br></td>
+	</tr><tr class="error"><th colspan=5>СРЕДА  9 мая 2018</th></tr>	<tr  class="success">
+		<td>14:00-15:35</td>
+		<td><a href="\error.html" target="_blank" onclick="showdis('Теория и практика речевого воздействия');return false">Теория и практика речевого воздействия</a> (практика)</td>
+		<td><a href="\error.html" target="_blank" onclick="showprep('729003');return false">Федорова К.И.</a></td>
+		<td><a href="\error.html" target="_blank" onclick="showaud('718','УЛК');return false">718 УЛК</a></td>
+		<td> С 09.01 по 30.06 <br></td>
+	</tr>	<tr  class="success">
+		<td>15:50-17:15</td>
+		<td><a href="\error.html" target="_blank" onclick="showdis('Копирайтинг');return false">Копирайтинг</a> (лекция, практика)</td>
+		<td><a href="\error.html" target="_blank" onclick="showprep('726129');return false">Сальникова О.М.</a></td>
+		<td><a href="\error.html" target="_blank" onclick="showaud('211','ГУК');return false">211 ГУК</a></td>
+		<td> С 09.01 по 30.06 <br></td>
+	</tr><tr class="error"><th colspan=5>ЧЕТВЕРГ 10 мая 2018</th></tr>	<tr  class="success">
+		<td>15:50-17:15</td>
+		<td><a href="\error.html" target="_blank" onclick="showdis('Лингвострановедческий анализ иноязычного медиатекста');return false">Лингвострановедческий анализ иноязычного медиатекста</a> (практика)</td>
+		<td><a href="\error.html" target="_blank" onclick="showprep('722323');return false">Мельничук Т.А.</a></td>
+		<td><a href="\error.html" target="_blank" onclick="showaud('718','УЛК');return false">718 УЛК</a></td>
+		<td> С 09.01 по 30.06 <br></td>
+	</tr><tr class="error"><th colspan=5>ПЯТНИЦА 11 мая 2018</th></tr>	<tr  class="success">
+		<td>14:00-15:35</td>
+		<td><a href="\error.html" target="_blank" onclick="showdis('Иностранный язык в научной сфере');return false">Иностранный язык в научной сфере</a> (практика)</td>
+		<td><a href="\error.html" target="_blank" onclick="showprep('895035056');return false">Мусалимас С.Э.</a></td>
+		<td><a href="\error.html" target="_blank" onclick="showaud('414','УЛК');return false">414 УЛК</a></td>
+		<td> С 09.01 по 30.06 <br></td>
+	</tr>	<tr  class="success">
+		<td>15:50-17:15</td>
+		<td><a href="\error.html" target="_blank" onclick="showdis('Социально-политическая лексика иноязычного медиатекста');return false">Социально-политическая лексика иноязычного медиатекста</a> (практика)</td>
+		<td><a href="\error.html" target="_blank" onclick="showprep('719565');return false">Иконникова А.Н.</a></td>
+		<td><a href="\error.html" target="_blank" onclick="showaud('711','УЛК');return false">711 УЛК</a></td>
+		<td> С 09.01 по 30.06 <br></td>
+	</tr>	<tr  class="success">
+		<td>17:30-19:15</td>
+		<td><a href="\error.html" target="_blank" onclick="showdis('Рекламная коммуникация (реклама как дискурс и разновидность рекламной коммуникации в лингвистике)');return false">Рекламная коммуникация (реклама как дискурс и разновидность рекламной коммуникации в лингвистике)</a> (практика)</td>
+		<td><a href="\error.html" target="_blank" onclick="showprep('726129');return false">Сальникова О.М.</a></td>
+		<td><a href="\error.html" target="_blank" onclick="showaud('211','ГУК');return false">211 ГУК</a></td>
+		<td> С 09.01 по 30.06 <br></td>
+	</tr></table>	
