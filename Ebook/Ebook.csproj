@@ -189,6 +189,9 @@
     <EmbeddedResource Include="SubjectAdd.resx">
       <DependentUpon>SubjectAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEdit.resx">
+      <DependentUpon>SubjectEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubjectList.resx">
       <DependentUpon>SubjectList.cs</DependentUpon>
     </EmbeddedResource>
