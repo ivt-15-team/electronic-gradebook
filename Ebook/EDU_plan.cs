@@ -42,13 +42,13 @@ namespace Ebook
 
         public EDU_plan(string spec_nam, string begin_yea)
         {
-//            UId = Program.EDU_plans.Count + 1;
+            //UId = Program.EDU_plans.Count + 1;
             spec_name = spec_nam;
             begin_year = Convert.ToInt32(begin_yea);
             content = new List<Edu_Plan_Content>();
         }
 
-		public void AddContent(string _subject_id, string _total_hours)
+		public void AddContent(string _subject_id, string _total_hours, string _employee)
 		{
 			string S;
 
@@ -60,10 +60,12 @@ namespace Ebook
             _content.subject_id = _subject_id;
 
 			// Console.WriteLine("Введите количество часов предмета");
-			S = Console.ReadLine();
+			//S = Console.ReadLine();
 			_content.total_hours = Convert.ToInt32(_total_hours);
 
-			_content.eduPlan = this;
+            _content.Employee = _employee;
+
+            _content.eduPlan = this;
             
 			content.Add(_content);
         }
