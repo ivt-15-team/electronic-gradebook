@@ -12,12 +12,14 @@ namespace Ebook
 {
     public partial class SubjectEdit : Form
     {
-        public SubjectEdit(Subject subj)
+        public SubjectEdit(Subject subj, SubjectRepository repo)
         {
             InitializeComponent();
             subject = subj;
+            reposit = repo;
+            
         }
-
+        private SubjectRepository reposit;
         private Subject subject;
 
         private void SubjectEdit_Load(object sender, EventArgs e)
@@ -33,6 +35,14 @@ namespace Ebook
         private void button1_Click(object sender, EventArgs e)
         {
             subject.Name = textBox1.Text;
+            reposit.Save();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            reposit.DeleteSubject(subject.Id);
+            reposit.Save();
             this.Close();
         }
     }
