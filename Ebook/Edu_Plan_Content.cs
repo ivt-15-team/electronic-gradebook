@@ -9,7 +9,7 @@ namespace Ebook
         public int UId { get; set; }
 		private EDU_plan _eduPlan;
         private Subject subject;
-        private Employee employee;
+        //private Employee employee;
         private ControlType controlType;
         /////////////
         private string _subject_id;
@@ -47,5 +47,17 @@ namespace Ebook
 				this._eduPlan = value;
 			}
 		}
-	}
+        public string employee;
+        public string Employee
+        {
+            get
+            {
+                return this.employee;
+            }
+            set
+            {
+                this.employee = value;
+            }
+        }
+    }
 }

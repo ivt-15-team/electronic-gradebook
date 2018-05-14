@@ -27,7 +27,7 @@ namespace Ebook
                 firstName = value;
             }
         }
-        string SecondName
+        public string SecondName
         {
             get
             {
@@ -38,7 +38,7 @@ namespace Ebook
                 secondName = value;
             }
         }
-        string MiddleName
+        public string MiddleName
         {
             get
             {
@@ -49,7 +49,7 @@ namespace Ebook
                 middleName = value;
             }
         }
-        DateTime BirthDate
+        public DateTime BirthDate
         {
             get
             {

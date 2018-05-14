@@ -12,6 +12,8 @@ namespace Ebook
 {
     public partial class Studentlist : Form
     {
+        EbookContext context = new EbookContext();
+
         public Studentlist()
         {
             InitializeComponent();
@@ -77,7 +79,7 @@ namespace Ebook
         private void button3_Click(object sender, EventArgs e)
         {
             EbookContext context = new EbookContext();
-            Student st = new Student(textBox1.Text, textBox2.Text, textBox3.Text, new DateTime(2001, 1, 1), comboBox1.Text, comboBox2.Text);
+            Student st = new Student(SecondName.Text, FirstName.Text, ThirdName.Text, new DateTime(2001, 1, 1), Group.Text, Status.Text);
             context.Students.Add(st);
             context.SaveChanges();
             
@@ -85,7 +87,8 @@ namespace Ebook
 
         private void Studentlist_Load(object sender, EventArgs e)
         {
-            EbookContext context = new EbookContext();
+            
+
             dataGridView1.DataSource = context.Students.ToList();
             
             //List<Student> s = (List<Student>)context.Students.;
@@ -94,6 +97,36 @@ namespace Ebook
             //{
             //    comboBox1.Items.Add(subj.Name);
             //}
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<Student> t = context.Students.ToList();
+            //filter
+
+            string fname, sname, tname,group;
+            if (FirstName.Text != "Имя")
+            {
+                fname = FirstName.Text;
+            }
+            if (SecondName.Text != "Фамилия")
+            {
+                sname = SecondName.Text;
+            }
+            if (ThirdName.Text != "Отчество")
+            {
+                tname = ThirdName.Text;
+            }
+            if (Group.Text != "Группа")
+            {
+                group = Group.Text;
+            }
+            
+            
+
+            
+
+            dataGridView1.DataSource = t;
         }
     }
 }

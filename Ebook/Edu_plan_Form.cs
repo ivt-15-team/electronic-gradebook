@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ebook
-{
+{        
+
+	//static public List<EDU_plan> EDU_plans = new List<EDU_plan>();
+
     public partial class Edu_plan_Form : Form
     {
-        // To Program.cs
-        //static public List<EDU_plan> EDU_plans = new List<EDU_plan>();
         EDU_plan current_plan;
         public Edu_plan_Form()
         {
@@ -22,8 +23,13 @@ namespace Ebook
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (current_plan == null)
+            {
+                MessageBox.Show("Нет плана");
+                return;
+            }
             // Добавить в план
-            current_plan.AddContent(textBox1.Text, textBox2.Text);
+            current_plan.AddContent(textBox1.Text, textBox2.Text, textBox5.Text);
 
             // Взять из плана (чтоб наверняка)
             Edu_Plan_Content _tmp = current_plan.content.Last();
@@ -63,6 +69,11 @@ namespace Ebook
 
         private void reload_EDU_plan_content()
         {
+            if (current_plan == null)
+            {
+                MessageBox.Show("Нет плана");
+                return;
+            }
             dataGridView1.Rows.Clear();
             foreach (var _tmp in current_plan.content)
             {
@@ -70,6 +81,7 @@ namespace Ebook
                 row.Cells[0].Value = Convert.ToString(_tmp.UId);
                 row.Cells[1].Value = _tmp.subject_id;
                 row.Cells[2].Value = Convert.ToString(_tmp.total_hours);
+                row.Cells[3].Value = _tmp.employee;
                 dataGridView1.Rows.Add(row);
             }
         }

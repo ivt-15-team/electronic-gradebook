@@ -122,6 +122,10 @@
     <Compile Include="Marks.Designer.cs">
       <DependentUpon>Marks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805140730500_zachetka.cs" />
+    <Compile Include="Migrations\201805140730500_zachetka.Designer.cs">
+      <DependentUpon>201805140730500_zachetka.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="person.cs" />
     <Compile Include="Program.cs" />
@@ -142,12 +146,6 @@
     <Compile Include="SubjectAdd.Designer.cs">
       <DependentUpon>SubjectAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubjectEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubjectEdit.Designer.cs">
-      <DependentUpon>SubjectEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="SubjectList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +165,9 @@
     <EmbeddedResource Include="Marks.resx">
       <DependentUpon>Marks.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805140730500_zachetka.resx">
+      <DependentUpon>201805140730500_zachetka.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -181,9 +182,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectAdd.resx">
       <DependentUpon>SubjectAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubjectEdit.resx">
-      <DependentUpon>SubjectEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectList.resx">
       <DependentUpon>SubjectList.cs</DependentUpon>
