@@ -9,6 +9,7 @@ namespace Ebook
         public string GroupName { get; set; }
         //THAT'S A BAD IDEA
         public string Status { get; set; }
+        public string zachentka { get; set; }
 
         public Student()
         {

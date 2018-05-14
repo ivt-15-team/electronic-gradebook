@@ -122,9 +122,9 @@
     <Compile Include="Marks.Designer.cs">
       <DependentUpon>Marks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804300931532_1.cs" />
-    <Compile Include="Migrations\201804300931532_1.Designer.cs">
-      <DependentUpon>201804300931532_1.cs</DependentUpon>
+    <Compile Include="Migrations\201805140730500_zachetka.cs" />
+    <Compile Include="Migrations\201805140730500_zachetka.Designer.cs">
+      <DependentUpon>201805140730500_zachetka.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="person.cs" />
@@ -165,8 +165,8 @@
     <EmbeddedResource Include="Marks.resx">
       <DependentUpon>Marks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804300931532_1.resx">
-      <DependentUpon>201804300931532_1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201805140730500_zachetka.resx">
+      <DependentUpon>201805140730500_zachetka.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
