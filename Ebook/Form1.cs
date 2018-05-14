@@ -89,10 +89,10 @@ namespace Ebook
             Application.Exit();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private async void button4_Click(object sender, EventArgs e)
         {
-            RequsetParser RP = new RequsetParser();
-            //textBox1.Text = (RP.request("ИМИ"));
+            RequestParser RP = new RequestParser("showrasp", "ИЗФИР-М-МКМ-17-72", "7-05-2018");
+            textBox1.Text = await RP.requestAsync();
         }
     }
 }
