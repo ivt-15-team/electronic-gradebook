@@ -29,10 +29,7 @@ namespace Ebook
                 return;
             }
             // Добавить в план
-            current_plan.AddContent(textBox1.Text, textBox2.Text, textBox5.Text);
-
-            // Взять из плана (чтоб наверняка)
-            Edu_Plan_Content _tmp = current_plan.content.Last();
+            current_plan.AddContent(textBox1.Text, textBox2.Text, textBox5.Text, textBox6.Text);
 
             reload_EDU_plan_content();
         }
@@ -46,10 +43,11 @@ namespace Ebook
         {
             EDU_plan tmp_EDU_plan = new EDU_plan(textBox3.Text, textBox4.Text);
 
-            Program.EDU_plans.Add(tmp_EDU_plan);
+            // Заменить на запрос добавления в БД
+            //Program.EDU_plans.Add(tmp_EDU_plan);
 
             // Взять из списка планов (чтоб наверняка)
-            current_plan = Program.EDU_plans.Last();
+            //current_plan = Program.EDU_plans.Last();
 
             reload_EDU_plan();
         }
@@ -57,14 +55,14 @@ namespace Ebook
         private void reload_EDU_plan()
         {
             dataGridView2.Rows.Clear();
-            foreach (var _tmp in Program.EDU_plans)
-            {
-                DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
-                row.Cells[0].Value = _tmp.UId;
-                row.Cells[1].Value = _tmp.Spec_name;
-                row.Cells[2].Value = Convert.ToString(_tmp.Begin_year);
-                dataGridView2.Rows.Add(row);
-            }
+            //foreach (var _tmp in Program.EDU_plans)
+            //{
+            //    DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+            //    row.Cells[0].Value = _tmp.UId;
+            //    row.Cells[1].Value = _tmp.Spec_name;
+            //    row.Cells[2].Value = Convert.ToString(_tmp.Begin_year);
+            //    dataGridView2.Rows.Add(row);
+            //}
         }
 
         private void reload_EDU_plan_content()
@@ -75,16 +73,20 @@ namespace Ebook
                 return;
             }
             dataGridView1.Rows.Clear();
-            foreach (var _tmp in current_plan.content)
-            {
-                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-                row.Cells[0].Value = Convert.ToString(_tmp.UId);
-                row.Cells[1].Value = _tmp.subject_id;
-                row.Cells[2].Value = Convert.ToString(_tmp.total_hours);
-                row.Cells[3].Value = _tmp.ControlType;
-                row.Cells[4].Value = _tmp.employee;
-                dataGridView1.Rows.Add(row);
-            }
+
+            // Заменить на запрос
+            //foreach (var _tmp in Program.EDU_plan_Contents)
+            //{
+            //    if (current_plan.UId != _tmp.EduPlanUID)
+            //        continue;
+            //    DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+            //    row.Cells[0].Value = Convert.ToString(_tmp.UId);
+            //    row.Cells[1].Value = _tmp.subject_id;
+            //    row.Cells[2].Value = Convert.ToString(_tmp.total_hours);
+            //    row.Cells[3].Value = _tmp.ControlType;
+            //    row.Cells[4].Value = _tmp.employee;
+            //    dataGridView1.Rows.Add(row);
+            //}
         }
 
         private void dataGridView2_SelectionChanged(object sender, EventArgs e)
@@ -92,7 +94,7 @@ namespace Ebook
             DataGridViewRow row = (DataGridViewRow)dataGridView2.CurrentRow;
             int _id = Convert.ToInt32(row.Cells[0].Value);
 
-            current_plan = Program.EDU_plans.Find(x => x.UId == _id);
+            //current_plan = Program.EDU_plans.Find(x => x.UId == _id);
 
             reload_EDU_plan_content();
         }

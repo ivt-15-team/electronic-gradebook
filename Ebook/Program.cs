@@ -8,6 +8,9 @@ namespace Ebook
 {
     static class Program
     {
+        //static public List<EDU_plan> EDU_plans = new List<EDU_plan>();
+        //static public List<Edu_Plan_Content> EDU_plan_Contents = new List<Edu_Plan_Content>();
+
         static public string login;
         static public string access;
 
@@ -21,6 +24,7 @@ namespace Ebook
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Autorization());
             Application.Run(new Form1());
+            //Application.Run(new Edu_plan_Form());
         }
     }
 }

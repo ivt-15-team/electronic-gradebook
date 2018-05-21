@@ -7,10 +7,10 @@ namespace Ebook
     {
         [Key]
         public int UId { get; set; }
-		private EDU_plan _eduPlan;
+		//private EDU_plan _eduPlan;
         private Subject subject;
         //private Employee employee;
-        private ControlType controlType;
+        //private ControlType controlType;
         /////////////
         private string _subject_id;
         private int _total_hours;
@@ -36,17 +36,17 @@ namespace Ebook
                 this._total_hours = value;
             }
         }
-		public EDU_plan eduPlan
-		{
-			get
-			{
-				return this._eduPlan;
-			}
-			set
-			{
-				this._eduPlan = value;
-			}
-		}
+		//public EDU_plan eduPlan
+		//{
+		//	get
+		//	{
+		//		return this._eduPlan;
+		//	}
+		//	set
+		//	{
+		//		this._eduPlan = value;
+		//	}
+		//}
         public string employee;
         public string Employee
         {
@@ -59,7 +59,8 @@ namespace Ebook
                 this.employee = value;
             }
         }
-        public ControlType ControlType
+        public string controlType;
+        public string ControlType
         {
             get
             {
@@ -68,6 +69,17 @@ namespace Ebook
             set
             {
                 this.controlType = value;
+            }
+        }
+        public int EduPlanUID
+        {
+            get
+            {
+                return this.EduPlanUID;
+            }
+            set
+            {
+                this.EduPlanUID = value;
             }
         }
     }

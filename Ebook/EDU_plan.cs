@@ -8,7 +8,7 @@ namespace Ebook
     {
         [Key]
         public int UId { get; set; }
-
+        private int ContentsCount = 0;
         private string spec_name;
         public string Spec_name
         {
@@ -33,7 +33,7 @@ namespace Ebook
                 begin_year = value;
             }
         }
-        public List<Edu_Plan_Content> content;
+        //public List<Edu_Plan_Content> content;
 
         public EDU_plan()
         {
@@ -45,16 +45,15 @@ namespace Ebook
             //UId = Program.EDU_plans.Count + 1;
             spec_name = spec_nam;
             begin_year = Convert.ToInt32(begin_yea);
-            content = new List<Edu_Plan_Content>();
         }
 
-		public void AddContent(string _subject_id, string _total_hours, string _employee)
+		public void AddContent(string _subject_id, string _total_hours, string _ctr_type, string _employee)
 		{
 			string S;
 
-            Edu_Plan_Content _content = new Edu_Plan_Content();
+            ContentsCount++;
 
-            _content.UId = content.Count + 1;
+            Edu_Plan_Content _content = new Edu_Plan_Content();
 
             // Console.WriteLine("Введите ИД предмета");
             _content.subject_id = _subject_id;
@@ -63,17 +62,20 @@ namespace Ebook
 			//S = Console.ReadLine();
 			_content.total_hours = Convert.ToInt32(_total_hours);
 
+            _content.ControlType = _ctr_type;
+
             _content.Employee = _employee;
 
-            _content.eduPlan = this;
-            
-			content.Add(_content);
+            _content.EduPlanUID = UId;
+
+            // Заменить на запрос добавления в БД
+            //Program.EDU_plan_Contents.Add(_content);
         }
 
 		public void AddContent(Edu_Plan_Content _content)
 		{
-			_content.eduPlan = this;
-			content.Add(_content);
+			_content.EduPlanUID = UId;
+            //Program.EDU_plan_Contents.Add(_content);
 		}
     }
 }

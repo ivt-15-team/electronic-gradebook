@@ -32,6 +32,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,11 +49,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.controlType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -97,6 +98,32 @@
             this.dataGridView1.Size = new System.Drawing.Size(436, 248);
             this.dataGridView1.TabIndex = 0;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // subj
+            // 
+            this.subj.HeaderText = "subj";
+            this.subj.Name = "subj";
+            // 
+            // hours
+            // 
+            this.hours.HeaderText = "hours";
+            this.hours.Name = "hours";
+            // 
+            // controlType
+            // 
+            this.controlType.HeaderText = "controlType";
+            this.controlType.Name = "controlType";
+            // 
+            // employee
+            // 
+            this.employee.HeaderText = "employee";
+            this.employee.Name = "employee";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView2);
@@ -139,14 +166,14 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 21);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
+            this.textBox1.Size = new System.Drawing.Size(126, 20);
             this.textBox1.TabIndex = 7;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(164, 21);
+            this.textBox2.Location = new System.Drawing.Point(144, 21);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 20);
+            this.textBox2.Size = new System.Drawing.Size(89, 20);
             this.textBox2.TabIndex = 8;
             // 
             // button2
@@ -184,42 +211,24 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(316, 21);
+            this.textBox5.Location = new System.Drawing.Point(239, 21);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(146, 20);
+            this.textBox5.Size = new System.Drawing.Size(115, 20);
             this.textBox5.TabIndex = 13;
             // 
-            // dataGridViewTextBoxColumn1
+            // textBox6
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // subj
-            // 
-            this.subj.HeaderText = "subj";
-            this.subj.Name = "subj";
-            // 
-            // hours
-            // 
-            this.hours.HeaderText = "hours";
-            this.hours.Name = "hours";
-            // 
-            // controlType
-            // 
-            this.controlType.HeaderText = "controlType";
-            this.controlType.Name = "controlType";
-            // 
-            // employee
-            // 
-            this.employee.HeaderText = "employee";
-            this.employee.Name = "employee";
+            this.textBox6.Location = new System.Drawing.Point(360, 21);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(146, 20);
+            this.textBox6.TabIndex = 14;
             // 
             // Edu_plan_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 357);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -265,5 +274,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hours;
         private System.Windows.Forms.DataGridViewTextBoxColumn controlType;
         private System.Windows.Forms.DataGridViewTextBoxColumn employee;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
