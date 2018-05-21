@@ -49,6 +49,14 @@ namespace Ebook
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
             doc.LoadHtml(responseString);
 
+            var days = doc.DocumentNode.SelectNodes("//tr/th").Skip(5).ToArray();
+
+            var daysCount = doc.DocumentNode.SelectNodes("//tr").ToArray();
+
+
+
+
+
             List<List<string>> table = doc.DocumentNode.SelectSingleNode("//table[@class='rasp table table-hover table-bordered']")
                         .Descendants("tr")
                         .Skip(1)
@@ -58,8 +66,10 @@ namespace Ebook
             for (int i = 0; i < table.Count; i++)
                 for (int j = 0; j < table[i].Count; j++)
                     outString += table[i][j].ToString();
-            System.IO.File.WriteAllText(@"C:\Users\Student\Desktop\ParseText.txt", responseString);
-            return outString;
+            string day = "";
+            for (int i = 0; i < daysCount.Count(); i++)
+                day += daysCount[i].InnerText.ToString();
+            return day;//outString;
         }
     }
 }
