@@ -43,11 +43,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -89,6 +90,7 @@
             this.dataGridViewTextBoxColumn1,
             this.subj,
             this.hours,
+            this.controlType,
             this.employee});
             this.dataGridView1.Location = new System.Drawing.Point(4, 4);
             this.dataGridView1.Name = "dataGridView1";
@@ -180,6 +182,13 @@
             this.textBox4.Size = new System.Drawing.Size(146, 20);
             this.textBox4.TabIndex = 11;
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(316, 21);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(146, 20);
+            this.textBox5.TabIndex = 13;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "id";
@@ -196,17 +205,15 @@
             this.hours.HeaderText = "hours";
             this.hours.Name = "hours";
             // 
+            // controlType
+            // 
+            this.controlType.HeaderText = "controlType";
+            this.controlType.Name = "controlType";
+            // 
             // employee
             // 
             this.employee.HeaderText = "employee";
             this.employee.Name = "employee";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(316, 21);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(146, 20);
-            this.textBox5.TabIndex = 13;
             // 
             // Edu_plan_Form
             // 
@@ -252,10 +259,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn year;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn subj;
         private System.Windows.Forms.DataGridViewTextBoxColumn hours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn controlType;
         private System.Windows.Forms.DataGridViewTextBoxColumn employee;
-        private System.Windows.Forms.TextBox textBox5;
     }
 }
