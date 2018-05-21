@@ -19,17 +19,6 @@ namespace Ebook
             InitializeComponent();
         }
         private int k = 0;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button1.Text = "sd";
-            k = (k + 1) % 3;
-            if (k == 0)
-                button1.Text = ">";
-            if (k == 1)
-                button1.Text = "<";
-            if (k == 2)
-                button1.Text = "=";
-        }
 
         private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
@@ -40,7 +29,7 @@ namespace Ebook
         {
             if (sender is TextBox textBox)
             {
-                if (textBox.Text == "Фамилия" || textBox.Text == "Имя")
+                if (textBox.Text == "Фамилия" || textBox.Text == "Имя" || textBox.Text == "Отчество" || textBox.Text == "Номер зачетной книжки")
                     textBox.Text = string.Empty;
             }
         }
@@ -49,40 +38,32 @@ namespace Ebook
         {
             if (sender is TextBox textBox)
             {
-                if (textBox.Name == "textBox1" && textBox.Text == string.Empty)
+                if (textBox.Name == "SecondName" && textBox.Text == string.Empty)
                     textBox.Text = "Фамилия";
-                if (textBox.Name == "textBox2" && textBox.Text == string.Empty)
+                if (textBox.Name == "FirstName" && textBox.Text == string.Empty)
                     textBox.Text = "Имя";
+                if (textBox.Name == "ThirdName" && textBox.Text == string.Empty)
+                    textBox.Text = "Отчество";
+                if (textBox.Name == "Zachetka" && textBox.Text == string.Empty)
+                    textBox.Text = "Номер зачетной книжки";
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            button1.Text = "sd";
-            if (k == 0) {
-                button1.Text = ">";
-                k++;
-            }
-            if (k == 1)
-            {
-                button1.Text = "<";
-                k++;
-            }
-            if (k == 2)
-            {
-                button1.Text = "=";
-                k = 0;
-            }
 
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
             EbookContext context = new EbookContext();
-            Student st = new Student(SecondName.Text, FirstName.Text, ThirdName.Text, new DateTime(2001, 1, 1), Group.Text, Status.Text);
+            Student st = new Student(SecondName.Text, FirstName.Text, ThirdName.Text, BirthDate.Value, Group.Text, Status.Text);
             context.Students.Add(st);
             context.SaveChanges();
-            
+            SecondName.Text = "Фамилия";
+            FirstName.Text = "Имя";
+            ThirdName.Text = "Отчество";
+            Zachetka.Text = "Номер зачетной книжки";
+            Group.Text = "Группа";
+            Status.Text = "Статус";
+
         }
 
         private void Studentlist_Load(object sender, EventArgs e)
@@ -104,29 +85,51 @@ namespace Ebook
             List<Student> t = context.Students.ToList();
             //filter
 
-            string fname, sname, tname,group;
+            string fname, sname, tname,group, status;
             if (FirstName.Text != "Имя")
             {
                 fname = FirstName.Text;
+                t = t.FindAll(s => s.SecondName == fname);
             }
             if (SecondName.Text != "Фамилия")
             {
                 sname = SecondName.Text;
+                t = t.FindAll(s => s.FirstName == sname);
             }
             if (ThirdName.Text != "Отчество")
             {
                 tname = ThirdName.Text;
+                t = t.FindAll(s => s.MiddleName == tname);
             }
             if (Group.Text != "Группа")
             {
                 group = Group.Text;
+                t = t.FindAll(s => s.GroupName == group);
             }
-            
-            
+            if (Status.Text != "Статус")
+            {
+                status = Status.Text;
+                t = t.FindAll(s => s.Status == status);
+            }
+            //var ss = t.FindAll(s => s.FirstName == "Мент");
+            //var ss = from sss in t
+            //where sss.FirstName == "Мент"
+            //         select sss;
 
-            
 
-            dataGridView1.DataSource = t;
+
+            dataGridView1.DataSource =t;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource= context.Students.ToList();
+            SecondName.Text = "Фамилия";
+            FirstName.Text = "Имя";
+            ThirdName.Text = "Отчество";
+            Zachetka.Text = "Номер зачетной книжки";
+            Group.Text = "Группа";
+            Status.Text = "Статус";
         }
     }
 }
